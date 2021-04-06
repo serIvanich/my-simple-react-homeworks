@@ -45,7 +45,7 @@ div.message:before {
     float: left;
     margin-left: 1vw;
     margin-top: 2vh;
-    font-size: 2.8vh;
+    font-size: 26px;
     color: mediumorchid;
 }
 
@@ -54,7 +54,7 @@ div.message:before {
     float: left;
     margin-left: 1vw;
     margin-top: 1.5vh;
-    font-size: 2.3vh;
+    font-size: 18px;
     color: beige;
 
 }
@@ -66,4 +66,3 @@ div.message:before {
     margin-right: 0.5vw;
     color: chartreuse;
 }
-

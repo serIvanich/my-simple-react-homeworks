@@ -1,5 +1,6 @@
 import React from 'react'
 import Message from './Message'
+import AlternativeMessage from "./AlternativeMessage";
 
 const messageData = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
@@ -7,9 +8,12 @@ const messageData = {
     message: 'some text',
     time: '22:00',
 }
+const timeCreate = new Date()
+let n = timeCreate.toTimeString().slice(0,8)
 
 
 function HW1() {
+
     return (
         <div>
             <hr/>
@@ -26,12 +30,10 @@ function HW1() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeMessage/>*/}
+            <AlternativeMessage timeCreate={n} />
             <hr/>
         </div>
     )
 }
-
-
 
 export default HW1
