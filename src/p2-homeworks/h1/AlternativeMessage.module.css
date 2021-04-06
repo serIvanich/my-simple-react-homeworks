@@ -1,0 +1,37 @@
+.container {
+    position: relative;
+    display: grid;
+    width: 500px;
+    height: 200px;
+    margin: 50px auto;
+    background-color: burlywood;
+    grid-template-areas: 'f s t' 'e e t';
+    grid-template-columns:  2fr 3fr 3fr;
+    grid-template-rows: 90px 5fr;
+}
+
+.firstElem {
+    grid-area: f;
+    background-color: darkgray;
+}
+
+.secondElem {
+    grid-area: s;
+    background-color: aquamarine;
+}
+
+.thirdElem {
+    grid-area: t;
+    background-color: goldenrod;
+}
+
+.fourthElem {
+    grid-area: e;
+    background-color: coral;
+}
+
+.time {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
