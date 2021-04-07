@@ -1,5 +1,6 @@
-import React, { MouseEventHandler } from 'react'
-import { AffairType } from './HW2'
+import React from 'react'
+import s from './Affairs.module.css'
+import {AffairType} from "./HW2";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -14,11 +15,13 @@ function Affair(props: AffairPropsType) {
     }// need to fix
 
     return (
-        <div>
-            {props.affair.name}
+        <>
+            <li >
+                {props.affair.name}
 
-            <button onClick={deleteCallback}>X</button>
-        </div>
+                <button className={s.buttonDelete} onClick={deleteCallback}>x</button>
+            </li>
+        </>
     )
 }
 

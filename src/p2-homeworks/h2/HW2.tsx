@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import AlternativeAffairs from "./AlternativeAffairs";
 
 // types
 export type AffairPriorityType = 'high' | 'middle' | 'low'// need to fix any
@@ -9,6 +10,8 @@ export type AffairType = {
     priority: AffairPriorityType
 }// need to fix any
 export type FilterType = 'all' | AffairPriorityType
+
+export type ValueType = 'no active' | FilterType
 
 // constants
 const defaultAffairs: Array<AffairType> = [ // need to fix any
@@ -22,10 +25,10 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 // pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
     if (filter === 'all') return affairs
-    else return affairs.filter( a => a.priority === filter)// need to fix
+    else return affairs.filter(a => a.priority === filter)// need to fix
 }
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
-    return affairs.filter( a => a._id !== _id)// need to fix
+    return affairs.filter(a => a._id !== _id)// need to fix
 }
 
 function HW2() {
@@ -34,6 +37,14 @@ function HW2() {
 
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
+
+    const [altAffairs, setAltAffairs] = useState<Array<AffairType>>([...defaultAffairs])
+
+    const deleteAltAffairCallback = (_id: number) => setAltAffairs(deleteAffair(altAffairs, _id))
+
+    const [value, setValue] = useState<ValueType>('no active')
+    const [valueDelete, setValueDelete] = useState<string>('no active')
+    const [id, setId] = useState<number | undefined>()
 
     return (
         <div>
@@ -49,7 +60,16 @@ function HW2() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeAffairs/>*/}
+            <AlternativeAffairs
+                data={altAffairs}
+                value={value}
+                valueDelete={valueDelete}
+                affairId={id}
+                setValue={setValue}
+                setValueDelete={setValueDelete}
+                setAffairId={setId}
+                deleteAltAffairCallback={deleteAltAffairCallback}
+            />
             <hr/>
         </div>
     )
