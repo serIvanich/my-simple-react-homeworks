@@ -1,7 +1,7 @@
 .container {
     position: relative;
     background-color: goldenrod;
-    width: 165px;
+    width: 170px;
     height: 125px;
     padding-left: 5px;
     color: bisque;
@@ -10,21 +10,49 @@
 .buttonDelete {
 
     position: absolute;
+    margin: 3px;
     right: 0;
+    color: orangered;
 }
 
 .buttonName {
 
     margin-left: 5px;
-    background-color: chartreuse;
+    background-color: lightgreen;
+    color: darkolivegreen;
 }
 
 
 .levelBlock {
     margin: 5px;
     padding: 5px;
-    width: 288px;
+    width: 290px;
     border: 1px solid gray;
+    border-radius: 5px;
+    background-color: bisque;
+    color: darkred;
+}
+
+button {
+    margin: 1px;
+    border-radius: 5px;
     background-color: darkgray;
+}
+
+button:active {
+    background-color: aliceblue;
+}
+
+button.all {
+    color: #61dafb;
+
+}
+button.high {
     color: chartreuse;
+}
+button.middle {
+    color: yellow;
+}
+button.low {
+    color: orangered;
 }

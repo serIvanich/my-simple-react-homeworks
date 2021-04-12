@@ -5,3 +5,34 @@
 .error {
     border: 1px solid red;
 }
+
+button {
+    display: block;
+    margin: 5px;
+}
+
+.textError {
+    position: fixed;
+
+   left: 308px;
+    padding: 5px;
+    margin: 5px auto;
+    border: 1px solid red;
+    background-color: lightpink;
+    opacity: 0.9;
+    white-space: pre;
+    color: firebrick;
+}
+
+.users {
+    width: 150px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid yellowgreen;
+    border-radius: 5px;
+}
+
+
+.altContainer {
+
+}

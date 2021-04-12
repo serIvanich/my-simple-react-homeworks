@@ -1,11 +1,12 @@
 import React from "react";
+import s from './Greeting.module.css'
 
-function AlternativeGreeting() {
+export function AlternativeGreeting() {
     return (
-        <div>
+        <div className={s.altContainer}>
 
         </div>
     );
 }
 
-export default AlternativeGreeting;
+

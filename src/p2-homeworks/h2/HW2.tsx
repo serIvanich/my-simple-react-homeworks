@@ -38,6 +38,7 @@ function HW2() {
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
+    //Alternative state
     const [altAffairs, setAltAffairs] = useState<Array<AffairType>>([...defaultAffairs])
 
     const deleteAltAffairCallback = (_id: number) => setAltAffairs(deleteAffair(altAffairs, _id))
