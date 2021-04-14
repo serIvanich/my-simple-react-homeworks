@@ -1,7 +1,7 @@
-import React, { ChangeEvent, useState, KeyboardEvent } from "react";
-import { TextError } from "./Greeting";
+import React, {ChangeEvent, useState} from "react";
+import {TextError} from "./Greeting";
 import s from './Greeting.module.css'
-import { AltUsersType } from "./HW3";
+import {AltUsersType} from "./HW3";
 
 type AltGreetingPropsType = {
     altUsers: Array<AltUsersType>
@@ -27,7 +27,6 @@ export function AlternativeGreeting({altUsers, addAltUser}: AltGreetingPropsType
     }
 
     function errorEnter(error: string) {
-        console.log(error)
         setError(error)
     }
 
@@ -35,11 +34,11 @@ export function AlternativeGreeting({altUsers, addAltUser}: AltGreetingPropsType
 
         if (!/^\w+$/.test(nameValue)) return errorEnter('name error')
         if (!/^\d{1,2}$/.test(ageValue)) return errorEnter('age error')
-        if (!/^\w+@\w+.?\w+.?\w*$/.test(emailValue)) return errorEnter('email error')
+        if (!/^\w+@\w+.\w+.?\w*$/.test(emailValue)) return errorEnter('email error')
         addAltUser(nameValue, ageValue, emailValue)
         setError('')
-        registrationCoupon(nameValue, emailValue)
-
+        setMyAlert(true)
+        setShowUsersArray(false)
         setNameValue('')
         setAgeValue('')
         setEmailValue('')
@@ -52,9 +51,7 @@ export function AlternativeGreeting({altUsers, addAltUser}: AltGreetingPropsType
     function onClickCheckboxUsers() {
         setShowUsersArray(!showUsersArray)
     }
-    const registrationCoupon = (name: string, email: string) => {
-        setMyAlert(true)
-    }
+
     function onClickContainer() {
         setMyAlert(false)
     }
@@ -86,19 +83,15 @@ export function AlternativeGreeting({altUsers, addAltUser}: AltGreetingPropsType
             </div>
 
 
-            {myAlert && <div className={s.myAlert}>
-                {`Hi, ${altUsers[0].name}! We verry happy, what you trust us.\nWe will write to you when you need it  ${altUsers[0].email} `}
+            {myAlert && <div className={s.myAlertContainer}>
+                <div className={s.myAlert}>{`Hi, ${altUsers[0].name}! We very happy, what you trust us.\nWe will write to you when you need it  ${altUsers[0].email} `}
                 <button onClick={onClickContainer}>next</button>
+                </div>
             </div> }
 
         </div>
     );
 }
-
-// type RegistrationCouponPropsType = {
-//     name: string
-//     email: string
-// }
 
 
 

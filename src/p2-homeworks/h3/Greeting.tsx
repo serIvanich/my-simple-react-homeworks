@@ -28,7 +28,7 @@ const Greeting: React.FC<GreetingPropsType> = (
     }
 
     function onPressEnter(e: KeyboardEvent<HTMLInputElement>) {
-        
+
         if (e.code === 'Enter') {
             addUser()
             e.currentTarget.blur()

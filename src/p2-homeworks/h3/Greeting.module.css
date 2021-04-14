@@ -14,7 +14,7 @@ button {
 .textError {
     position: fixed;
 
-   left: 308px;
+    left: 308px;
     padding: 5px;
     margin: 5px auto;
     border: 1px solid red;
@@ -69,23 +69,39 @@ button {
     padding: 5px;
 }
 
+.myAlertContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    opacity: .85;
+}
+
 .myAlert {
     position: absolute;
-    left: 5px;
-    top: 10px;
+
+
     height: 55px;
     padding: 5px;
-    margin-right: 5px;
-    border: 5px solid lightgrey;
+    margin: 100px 50px;
+    border: 5px solid turquoise;
     border-radius: 5px;
     background-color: slategrey;
     color: white;
     white-space: pre;
+
 }
 
+.myAlert button {
+    opacity: 1;
+}
 .altError {
     position: absolute;
     left: 330px;
     top: 150px
 }
+
+
 
