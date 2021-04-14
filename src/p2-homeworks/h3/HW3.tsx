@@ -1,11 +1,19 @@
 import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
 import {v1} from "uuid";
+import { AlternativeGreeting } from './AlternativeGreeting';
 
 // types
 export type UserType = {
     _id: string// need to fix any
     name: string // need to fix any
+}
+
+export type AltUsersType = {
+    id: string
+    name: string
+    age: string
+    email: string
 }
 
 // уровень работы с глобальными данными
@@ -14,9 +22,22 @@ function HW3() {
 
     const getId = () => v1()
     const addUserCallback = (name: string) => {
-        users.push({_id: getId(), name: name})// need to fix any
-        setUsers(users) // need to fix
+        const newUsers = [{_id: getId(), name: name}, ...users]
+        // need to fix any
+        setUsers(newUsers) // need to fix
     }
+//AlternativeGreeting
+    
+    const [altUsers, setAltUsers] = useState<Array<AltUsersType>>([])
+
+    const addAltUser = (name: string, age: string, email: string) => {
+        setAltUsers([
+            {id: v1(),
+            name: name,
+            age: age,
+            email: email}, ...altUsers])
+    }
+
 
     return (
         <div>
@@ -28,7 +49,7 @@ function HW3() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeGreeting/>*/}
+            <AlternativeGreeting altUsers={altUsers} addAltUser={addAltUser}/>
             <hr/>
         </div>
     )

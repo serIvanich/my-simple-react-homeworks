@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, KeyboardEvent, KeyboardEventHandler} from 'react'
 import s from './Greeting.module.css'
 import {UserType} from "./HW3";
 
@@ -27,13 +27,23 @@ const Greeting: React.FC<GreetingPropsType> = (
         setChecked(!checked)
     }
 
+    function onPressEnter(e: KeyboardEvent<HTMLInputElement>) {
+        
+        if (e.code === 'Enter') {
+            addUser()
+            e.currentTarget.blur()
+
+        }
+    }
+
     let inputClass
     error ? inputClass = s.error : inputClass = s.input// need to fix with (?:)
 
     return (
         <div>
             <span>Please,input correct name for added to list: </span>
-            <input value={name} onChange={setNameCallback} onFocus={onFocus} className={inputClass}/>
+            <input value={name} onChange={setNameCallback} onFocus={onFocus} onKeyPress={onPressEnter}
+                   className={inputClass}/>
             {error && <TextError error={error}/>}
             <button onClick={addUser}>add</button>
             <div className={s.users}>
@@ -56,7 +66,7 @@ type TextErrorPropsType = {
     error: string
 }
 
-const TextError: React.FC<TextErrorPropsType> = ({error}) => {
+export const TextError: React.FC<TextErrorPropsType> = ({error}) => {
     return <div className={s.textError}>
         {error}
     </div>

@@ -34,5 +34,58 @@ button {
 
 
 .altContainer {
-
+    position: relative;
+    width: 600px;
+    height: 250px;
+    margin: 0px auto;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
 }
+
+.nameInput input {
+    width: 80px;
+    margin: 0 5px;
+}
+
+.ageInput input {
+    width: 20px;
+    margin: 0 5px;
+}
+
+.emailInput input {
+    width: 100px;
+    margin: 0 5px;
+}
+
+.altContainer h1 {
+    color: red;
+}
+
+.groupUsers {
+    position: absolute;
+    border: 1px solid slategrey;
+    background-color: aliceblue;
+    padding: 5px;
+}
+
+.myAlert {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    height: 55px;
+    padding: 5px;
+    margin-right: 5px;
+    border: 5px solid lightgrey;
+    border-radius: 5px;
+    background-color: slategrey;
+    color: white;
+    white-space: pre;
+}
+
+.altError {
+    position: absolute;
+    left: 330px;
+    top: 150px
+}
+
