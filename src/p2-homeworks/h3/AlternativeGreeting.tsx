@@ -34,7 +34,7 @@ export function AlternativeGreeting({altUsers, addAltUser}: AltGreetingPropsType
 
         if (!/^\w+$/.test(nameValue)) return errorEnter('name error')
         if (!/^\d{1,2}$/.test(ageValue)) return errorEnter('age error')
-        if (!/^\w+@\w+.\w+.?\w*$/.test(emailValue)) return errorEnter('email error')
+        if (!/^\w+@\w+.\w+.\w*$/.test(emailValue)) return errorEnter('email error')
         addAltUser(nameValue, ageValue, emailValue)
         setError('')
         setMyAlert(true)
@@ -59,17 +59,21 @@ export function AlternativeGreeting({altUsers, addAltUser}: AltGreetingPropsType
 
     return (
         <div className={s.altContainer} >
-            <h1>WARNING!!!</h1>
-            <div>You are in the closed territory of the IT incubator!\nGive us your registration details. </div>
-            <div className={s.nameInput}> Your name: 
+            <h2>WARNING!!!</h2>
+            <hr />
+            <div className={s.text}>{'You are in the closed territory of the IT incubator!\nGive us your registration details.'} </div>
+            <hr />
+            <div className={s.nameInput}> Your name:
                 <input onChange={onChangeNameValue} value={nameValue} />
                 (name starts with a-z, may include a number!)
             </div>
             <div className={s.ageInput}>Your age:
                 <input onChange={onChangeAgeValue} value={ageValue} />
+                (only number!)
             </div>
             <div className={s.emailInput}>Your email:
                 <input onChange={onChangeEmailValue} value={emailValue} />
+                (for example email: name@mail.com)
             </div>
             <div>
                 <button onClick={onClickEnter}>enter</button>

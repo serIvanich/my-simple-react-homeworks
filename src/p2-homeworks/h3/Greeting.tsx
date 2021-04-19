@@ -44,7 +44,7 @@ const Greeting: React.FC<GreetingPropsType> = (
             <span>Please,input correct name for added to list: </span>
             <input value={name} onChange={setNameCallback} onFocus={onFocus} onKeyPress={onPressEnter}
                    className={inputClass}/>
-            {error && <TextError error={error}/>}
+            {error && <div className={s.textError}><TextError error={error}/></div>}
             <button onClick={addUser}>add</button>
             <div className={s.users}>
                 All users on list :
@@ -67,7 +67,7 @@ type TextErrorPropsType = {
 }
 
 export const TextError: React.FC<TextErrorPropsType> = ({error}) => {
-    return <div className={s.textError}>
+    return <div className={s.containerError}>
         {error}
     </div>
 }
