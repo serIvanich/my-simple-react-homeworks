@@ -19,12 +19,13 @@ button {
 }
 
 .containerError {
+    padding: 5px;
     border: 1px solid red;
+    border-radius: 5px;
     background-color: lightpink;
     opacity: 0.9;
     white-space: pre;
     color: firebrick;
-    padding: 5px;
 }
 
 .users {
@@ -103,7 +104,7 @@ input {
 .altError {
     position: absolute;
     left: 250px;
-    top: 220px
+    bottom:30px;
 }
 
 

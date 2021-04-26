@@ -1,5 +1,9 @@
 .blue {
+    padding: 5px;
     border-bottom: 5px solid blue;
+    border-top: 5px solid blue;
+    color: goldenrod;
+    font-size: 18px;
 }
 
 .column {
@@ -9,5 +13,8 @@
 }
 
 .testSpanError {
-    color: blue;
+    /*padding: 0 5px;*/
+    /*border: 2px solid red;*/
+    /*border-radius: 5px;*/
+    /*color: blue;*/
 }
