@@ -8,6 +8,7 @@
     grid-template-areas: 'f s t' 'e e t';
     grid-template-columns:  2fr 3fr 3fr;
     grid-template-rows: 90px 5fr;
+    text-align: center;
 }
 
 .firstElem {
@@ -35,3 +36,4 @@
     right: 0;
     bottom: 0;
 }
+

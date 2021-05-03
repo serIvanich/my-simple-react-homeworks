@@ -7,6 +7,7 @@
     color: bisque;
 
 }
+
 .buttonDelete {
 
     position: absolute;
@@ -15,13 +16,32 @@
     color: orangered;
 }
 
+
 .buttonName {
 
     margin-left: 5px;
-    background-color: lightgreen;
+    border-radius: 4px;
+    background-color: rosybrown;
     color: darkolivegreen;
 }
 
+.buttonName:hover {
+
+    outline-radius: 2px;
+    /*outline: 4px solid darkseagreen;*/
+    /*outline-offset: -2px;*/
+    background-color: yellow;
+}
+
+.buttonName:focus {
+    background-color: lightgreen;
+}
+
+.levelBlock button:hover {
+    background-color: tomato;
+    border: 3px solid crimson;
+    border-radius: 3px;
+}
 
 .levelBlock {
     margin: 5px;
@@ -33,27 +53,34 @@
     color: darkred;
 }
 
-button {
+.buttonContainer button {
     display: inline-block;
     margin: 1px;
     border-radius: 5px;
     background-color: darkgray;
 }
 
-button:active {
-    background-color: aliceblue;
+.buttonContainer button:hover {
+    background-color: silver;
 }
 
-button.all {
+.buttonContainer button:focus {
+    background-color: dimgray;
+}
+
+.buttonContainer button.all {
     color: #61dafb;
 
 }
-button.high {
+
+.buttonContainer button.high {
     color: chartreuse;
 }
-button.middle {
+
+.buttonContainer button.middle {
     color: yellow;
 }
-button.low {
+
+.buttonContainer button.low {
     color: orangered;
 }

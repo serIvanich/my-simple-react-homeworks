@@ -1,0 +1,41 @@
+.containerNav {
+    position: relative;
+    width: 240px;
+    padding-bottom: 40px;
+
+}
+.navLinksAll {
+    position: absolute;
+    left: 5px;
+    padding: 5px;
+    transition: left .7s ease;
+    text-decoration: none;
+
+}
+
+.containerNav a {
+    padding: 5px;
+    color: silver;
+    text-decoration: none;
+}
+.containerNav a:hover {
+    color: dimgray;
+}
+
+.navLinks {
+    position: absolute;
+    left: -190px;
+    padding: 5px;
+    transition: all .3s ease
+}
+.collapsedButton {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: darkseagreen;
+
+}
+h1 {
+    text-align: center;
+}

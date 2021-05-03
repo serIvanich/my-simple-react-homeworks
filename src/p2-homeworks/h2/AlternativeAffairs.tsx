@@ -31,6 +31,7 @@ function AlternativeAffairs(props: AltAffairsPropsType) {
                         props.setValueDelete(a.name)
                         props.setAffairId(a._id)
                     }
+
                     return <button key={a._id} className={s.buttonName} onClick={onClickName}>{a.name}</button>
                 })}
             </div>

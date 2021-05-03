@@ -1,26 +1,29 @@
 import React from 'react'
 import s from './AlternativeMessage.module.css'
-import {v1 as v} from 'uuid'
+import { UserType } from './HW1'
+
 
 type AltMessagePropsType = {
     timeCreate: string
+    user: UserType
 }
 
 function AlternativeMessage(props: AltMessagePropsType) {
     return (
         <div className={s.container}>
+
             <div className={s.time}>ENTRY TIME: {props.timeCreate}</div>
             <div className={s.firstElem}>
-                {v()}
+                <h3>{props.user.name}</h3>
             </div>
             <div className={s.secondElem}>
-                {v()}
+                {props.user.contact}
             </div>
             <div className={s.thirdElem}>
-                {v()}
+                {props.user.experience}
             </div>
             <div className={s.fourthElem}>
-                {v()}
+                {props.user.skills}
             </div>
 
         </div>
