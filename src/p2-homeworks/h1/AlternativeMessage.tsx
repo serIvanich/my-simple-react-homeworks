@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './AlternativeMessage.module.css'
-import {v4 as v} from 'uuid'
+import {v1 as v} from 'uuid'
 
 type AltMessagePropsType = {
     timeCreate: string

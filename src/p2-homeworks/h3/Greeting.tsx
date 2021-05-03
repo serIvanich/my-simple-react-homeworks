@@ -44,13 +44,13 @@ const Greeting: React.FC<GreetingPropsType> = (
             <span>Please,input correct name for added to list: </span>
             <input value={name} onChange={setNameCallback} onFocus={onFocus} onKeyPress={onPressEnter}
                    className={inputClass}/>
-            {error && <div className={s.textError}><TextError error={error}/></div>}
+            {error && <TextError error={error}/>}
             <button onClick={addUser}>add</button>
             <div className={s.users}>
                 All users on list :
                 <span> {totalUsers}</span>
                 <div>
-                    <input onClick={onChecked} type={'checkbox'} checked={checked}/>
+                    <input className={s.inputCheckbox} type={'checkbox'} checked={checked} onClick={onChecked} />
                     our group:
                     <div>
                         {checked && users.map(u => <span key={u._id}>  {u.name}  </span>)}

@@ -25,7 +25,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
 
     const addUser = () => {
-        const regexpName = /^\w+$/
+        const regexpName = /^[a-zA-Z]\w+$/
 
         if (regexpName.test(name)) {
 

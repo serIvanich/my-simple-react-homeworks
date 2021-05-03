@@ -32,7 +32,7 @@ export function AlternativeGreeting({altUsers, addAltUser}: AltGreetingPropsType
 
     function onClickEnter(){
 
-        if (!/^\w+$/.test(nameValue)) return errorEnter('name error')
+        if (!/^[a-zA-Z]\w+$/.test(nameValue)) return errorEnter('name error')
         if (!/^\d{1,2}$/.test(ageValue)) return errorEnter('age error')
         if (!/^\w+@\w+.\w+.\w*$/.test(emailValue)) return errorEnter('email error')
         addAltUser(nameValue, ageValue, emailValue)
