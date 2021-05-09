@@ -1,0 +1,14 @@
+.span {
+
+    margin: 100px 10px;
+
+}
+
+.span img {
+    width: 20px;
+    height: 20px;
+}
+
+.span:hover {
+    color: crimson;
+}
