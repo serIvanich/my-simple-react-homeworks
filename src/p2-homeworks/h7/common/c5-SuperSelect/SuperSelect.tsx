@@ -18,11 +18,12 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 ) => {
     const styleSelect = {
         margin: '10px',
-        borderColor: 'orange',
-        borderRadius: '3px'
+        borderColor: 'green',
+        borderRadius: '3px',
+        color: 'orange'
     }
     const styleOption = {
-        color: "orange"
+        color: "green"
     }
 
     const mappedOptions: any[] = options ? options.map((o, i) => {
