@@ -1,5 +1,9 @@
+import React from "react";
+import HW4 from "../../h4/HW4";
 
-
-export const JuniorPlus = () => {
-    return <h1>junior +</h1>
+function JuniorPlus() {
+    return <div>
+        <h1>Junior+</h1>
+    </div>
 }
+export default JuniorPlus

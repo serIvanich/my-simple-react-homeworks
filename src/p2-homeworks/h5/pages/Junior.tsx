@@ -1,5 +1,13 @@
+import React from "react"
 
+import {HW7} from "../../h7/HW7"
 
-export const Junior = () => {
-    return <h1>junior</h1>
+function Junior() {
+    return (
+        <div style={{margin: '5px'}}>
+            <HW7/>
+        </div>
+    )
 }
+
+export default Junior

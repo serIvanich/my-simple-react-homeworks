@@ -1,7 +1,9 @@
-.span {
+.containerSpan {
+    margin: 10px 10px;
+}
 
-    margin: 100px 10px;
-
+.containerButton {
+    margin: 10px 10px;
 }
 
 .span img {
