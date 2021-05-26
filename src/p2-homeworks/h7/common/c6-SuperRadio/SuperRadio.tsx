@@ -18,6 +18,8 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
     }
 ) => {
     const styleInput = {
+
+
         color: 'orange',
         marginLeft: '5px'
     }
@@ -32,7 +34,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
 
 
     const mappedOptions: any[] = options ? options.map((o, i) => ( // map options with key
-        <label key={name + '-' + i} style={(o === value ? {color: 'orange'} : {color: 'green'})}>
+        <label key={name + '-' + i} style={o === value ? {color: 'orange'} : {color: 'green'}}>
             <input
                 type={'radio'}
                 name={name}

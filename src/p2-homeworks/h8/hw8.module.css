@@ -1,0 +1,26 @@
+
+.container{
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+.button{
+    margin: 10px 8px;
+}
+
+.name{
+    margin-left: 5px;
+    color: lightseagreen;
+    font-family: fantasy;
+}
+
+.age{
+    position: absolute;
+    right: 10px;
+    color: darkseagreen;
+}
