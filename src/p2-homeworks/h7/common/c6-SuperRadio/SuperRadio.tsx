@@ -17,7 +17,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         ...restProps
     }
 ) => {
-    const styleInput = {
+    let styleInput = {
 
 
         color: 'orange',

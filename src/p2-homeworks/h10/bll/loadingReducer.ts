@@ -1,14 +1,29 @@
+
+const CHANGE_LOADING_STATE = 'CHANGE-LOADING-STATE'
+
 const initState = {
+    isInclusion: false,
+}
 
-};
-
-export const loadingReducer = (state = initState, action: any): any => { // fix any
+type InitStateType = typeof initState
+export const loadingReducer = (state: InitStateType = initState, action: loadingACType): InitStateType => { // fix any
     switch (action.type) {
-        case "": {
-            return state;
-        }
-        default: return state;
-    }
-};
+        case CHANGE_LOADING_STATE: {
+            return {
+                ...state,
+                isInclusion: action.isInclusion
 
-export const loadingAC = (): any => {}; // fix any
+            }
+        }
+        default:
+            return state
+    }
+}
+
+type loadingACType = {
+    type: typeof CHANGE_LOADING_STATE
+    isInclusion: boolean
+}
+export const loadingAC = (isInclusion: boolean): loadingACType => ({
+    type: CHANGE_LOADING_STATE, isInclusion
+}) // fix any
